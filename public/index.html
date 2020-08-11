@@ -4,17 +4,15 @@
     <meta charset="UTF-8" />
     <title>Video Chat</title>
     <style>
-    
-    div#logs p {
-      margin: 0;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 9px;
-    }
+      div#logs p {
+        margin: 0;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 9px;
+      }
 
-    div#logs p.error {
-      color: red;
-    }
-    
+      div#logs p.error {
+        color: red;
+      }
     </style>
   </head>
   <body>
@@ -26,9 +24,19 @@
       <button id="get-video">Get Video</button>
       <button id="call" disabled="disabled">Call</button>
     </div>
-    <p>Log messages:</p>
-    <div id="logs">
+
+    <div>
+      <form id="msg-form">
+      <input id="msg" type="text" />
+      <input type="submit"></input>
+      </form>
     </div>
+    <div>
+      <h2>Receive</h2>
+      <div id="receive-msg"></div>
+    </div>
+    <p>Log messages:</p>
+    <div id="logs"></div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/app.js"></script>
